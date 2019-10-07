@@ -78,8 +78,8 @@ plot(mtcars$mpg, mtcars$wt)
 
 Texto de la pregunta, incluyendo una tabla
 
-```{r diam}
-head(datos::diamantes)
+```{r cars}
+head(mtcars)
 
 ```
 
