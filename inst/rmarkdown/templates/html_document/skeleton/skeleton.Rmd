@@ -1,0 +1,130 @@
+---
+title: "Módulo 1: apuntes de clases"
+author: "Robert Oppenheimer"
+date: "16 de Julio de 1945"
+output: 
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    theme: flatly
+    df_print: paged
+    code_folding: show
+    fig_caption: true
+    include:
+      before_body: header.html
+      after_body: footer.html
+  bookdown::pdf_document2:
+    keep_tex: true
+  bookdown::word_document2:
+    toc: true
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
+
+
+
+# Primer tema (quizás una Introducción)
+
+Algún texto del primer tema.
+
+Una tabla 
+
+(*pruebe hacer click en el botón hide para ocultar el código*)
+
+```{r un_dataframe, message=FALSE, warning=FALSE}
+# este code chunk selecciona algunas columnas del data set iris y luego filtra observaciones
+
+library(dplyr)
+iris %>% 
+  select("Sepal.Length", "Sepal.Width", "Species") %>% 
+  filter(Sepal.Width >= 3)
+
+```
+
+
+
+# Segundo tema, usando pestañas para subtemas {.tabset .tabset-fade .tabset-pills}
+
+Una cita relevante:
+
+
+> Now I become Death,
+> the destroyer of worlds.
+
+Texto en el segundo tema, por ejemplo anunciando que en las siguientes 
+secciones verán una explicación, una pregunta, una respuesta y una nueva pregunta
+
++ **Pruebe hacer click en cada pestaña**
+
+## Explicación
+
+Texto de explicación
+
+incluyendo un gráfico
+
+```{r plot}
+plot(mtcars$mpg, mtcars$wt)
+```
+
+
+
+## Pregunta
+
+Texto de la pregunta, incluyendo una tabla
+
+```{r diam}
+head(datos::diamantes)
+
+```
+
+
+## Solución
+
+Texto de la solución, que incluye varios items
+
++ foo
++ bar
++ spam
+
+
+
+## Nueva pregunta
+
+Texto de la nueva pregunta
+
+$$e^{\pi i} + 1$$
+
+
+
+# Otro tema, sin usar pestañas
+
+Las ecuaciones pueder ser numeradas, gracias a que este documento usa el formato html del paquete bookdown
+
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  (\#eq:binom)
+\end{equation} 
+
+Y pueden referenciarse así: \@ref(eq:binom)
+
+## Subtema 1
+
+Texto en el subtema 1
+
+### Un subsubtema, parte del subtema 1
+
+Algún texto
+
+## Subtema 2
+
+Texto en el subtema 2
+
+# Conclusion
+
+Texto de la conclusión
