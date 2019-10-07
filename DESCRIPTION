@@ -4,7 +4,8 @@ Title: Templates for DSSS documents
 Version: 0.1.0
 Author: Ricardo Mayer
 Maintainer: Ricardo Mayer <ricardo.mayer@udp.cl>
-Description: Provides templates to write lecture notes, presentations and reports created by the Data Science for the Social Sciences program at Universidad Diego Portales
+Description: Provides templates to write lecture notes, presentations and reports created by the Data Science for the Social Sciences program at Universidad Diego Portales.
+    Currently it includes html templates but powerpoint and latex templates will be added soon.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
